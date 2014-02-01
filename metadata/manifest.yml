@@ -10,7 +10,6 @@ Cartridge-Version: 0.0.15
 Cartridge-Vendor: rockmongo
 Website: http://www.rockmongo.com
 Categories:
-- service
 - embedded
 Cart-Data:
 - Key: connection_url
