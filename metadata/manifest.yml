@@ -11,6 +11,7 @@ Cartridge-Vendor: rockmongo
 Website: http://www.rockmongo.com
 Categories:
 - embedded
+- service
 Cart-Data:
 - Key: connection_url
   Type: cart_data
