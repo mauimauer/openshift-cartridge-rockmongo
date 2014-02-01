@@ -16,7 +16,7 @@ esac
 echo "$version" > "$OPENSHIFT_ROCKMONGO_DIR/env/OPENSHIFT_ROCKMONGO_VERSION"
 cp -r ${OPENSHIFT_ROCKMONGO_DIR}/versions/$version/conf/* ${OPENSHIFT_ROCKMONGO_DIR}/conf/
 cp -r ${OPENSHIFT_ROCKMONGO_DIR}/versions/$version/conf.d/* ${OPENSHIFT_ROCKMONGO_DIR}/conf.d/
-cp -r ${OPENSHIFT_ROCKMONGO_DIR}/versions/$version/phpMyAdmin/* ${OPENSHIFT_ROCKMONGO_DIR}/phpMyAdmin/
+cp -r ${OPENSHIFT_ROCKMONGO_DIR}/versions/$version/rockmongo/* ${OPENSHIFT_ROCKMONGO_DIR}/rockmongo/
 
 ln -s ${_libdir}/httpd/modules ${OPENSHIFT_ROCKMONGO_DIR}modules
 ln -s /etc/httpd/conf/magic ${OPENSHIFT_ROCKMONGO_DIR}conf/magic
