@@ -5,22 +5,20 @@ Display-Name: RockMongo 1.1.5
 Description: Web based MongoDB administration tool. Requires the MongoDB cartridge to be installed first.
 Version: '1.1.5'
 License: GPLv2
-Vendor: Red Hat
-Cartridge-Version: 0.0.10
-Compatible-Versions:
-- 0.0.5
-- 0.0.6
+Vendor: rockmongo
+Cartridge-Version: 0.0.15
 Cartridge-Vendor: rockmongo
 Website: http://www.rockmongo.com
 Categories:
+- service
 - embedded
 Cart-Data:
 - Key: connection_url
   Type: cart_data
   Description: RockMongo connection URL
 Provides:
-- phpmyadmin-3
-- rockmongo
+- rockmongo-1.1.3
+- "rockmongo"
 Publishes:
   get-serve-info:
     Type: NET_TCP:db-config:url
@@ -32,7 +30,7 @@ Scaling:
   Min: 1
   Max: -1
 Configure-Order:
-- mongodb
+- mongodb-2.2
 - rockmongo
 Endpoints:
 - Private-IP-Name: IP
