@@ -1,0 +1,22 @@
+#!/bin/bash -e
+
+if [[ -d /usr/lib64 ]]; then
+  _libdir=/usr/lib64
+else
+  _libdir=/usr/lib
+fi
+
+source $OPENSHIFT_CARTRIDGE_SDK_BASH
+
+ln -s ${_libdir}/httpd/modules ${OPENSHIFT_ROCKMONGO_DIR}modules
+ln -s /etc/httpd/conf/magic ${OPENSHIFT_ROCKMONGO_DIR}conf/magic
+
+client_result ""
+if [ -n "$OPENSHIFT_MONGODB_DB_USERNAME" ]; then
+  client_result "Please make note of these MongoDB credentials again:"
+  client_result "  Root User: $OPENSHIFT_MONGO_DB_USERNAME"
+  client_result "  Root Password: $OPENSHIFT_MONGO_DB_PASSWORD"
+fi
+client_result "URL: https://$OPENSHIFT_GEAR_DNS/rockmongo/"
+
+cart_props "connection_url=https://$OPENSHIFT_GEAR_DNS/rockmongo/"

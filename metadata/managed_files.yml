@@ -1,0 +1,18 @@
+---
+locked_files:
+- bin/
+- bin/*
+- metadata/
+- conf/
+- conf/*
+- conf.d/
+- conf.d/disabled_pages.conf
+- conf.d/openshift.conf
+- conf.d/php.conf
+- conf.d/rockmongo.conf
+- rockmongo/
+- rockmongo/*
+- env/
+- env/*
+processed_templates:
+- '**/*.erb'
